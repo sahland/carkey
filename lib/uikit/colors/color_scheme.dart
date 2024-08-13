@@ -13,17 +13,14 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
   final Color dialogBackgroundColor;
 
   const AppColorScheme._(
-    {
-      required this.primary,
+      {required this.primary,
       required this.secondary,
       required this.surface,
       required this.background,
       required this.textField,
       required this.textField2,
       required this.inactive,
-      required this.dialogBackgroundColor
-    }
-  );
+      required this.dialogBackgroundColor});
 
   const AppColorScheme.light()
       : primary = LightColorPalette.treeGreen,
@@ -46,32 +43,30 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
         dialogBackgroundColor = DarkColorPalette.darkGrey;
 
   @override
-  ThemeExtension<AppColorScheme> copyWith (
-    {
-      Color? primary,
+  ThemeExtension<AppColorScheme> copyWith(
+      {Color? primary,
       Color? secondary,
       Color? surface,
       Color? background,
       Color? textField,
       Color? textField2,
       Color? inactive,
-      Color? dialogBackgroundColor
-    }
-  ) {
+      Color? dialogBackgroundColor}) {
     return AppColorScheme._(
-      primary: primary ?? this.primary, 
-      secondary: secondary ?? this.secondary, 
-      surface: surface ?? this.surface, 
-      background: background ?? this.background, 
-      textField: textField ?? this.textField, 
-      textField2: textField2 ?? this.textField2, 
+      primary: primary ?? this.primary,
+      secondary: secondary ?? this.secondary,
+      surface: surface ?? this.surface,
+      background: background ?? this.background,
+      textField: textField ?? this.textField,
+      textField2: textField2 ?? this.textField2,
       inactive: inactive ?? this.inactive,
-      dialogBackgroundColor: dialogBackgroundColor ?? this.dialogBackgroundColor,
+      dialogBackgroundColor:
+          dialogBackgroundColor ?? this.dialogBackgroundColor,
     );
   }
 
   @override
-  ThemeExtension<AppColorScheme> lerp (
+  ThemeExtension<AppColorScheme> lerp(
     ThemeExtension<AppColorScheme>? other,
     double t,
   ) {
@@ -80,15 +75,15 @@ class AppColorScheme extends ThemeExtension<AppColorScheme> {
     }
 
     return AppColorScheme._(
-      primary: Color.lerp(primary, other.primary, t)!, 
-      secondary: Color.lerp(secondary, other.secondary, t)!, 
-      surface: Color.lerp(surface, other.surface, t)!, 
-      background: Color.lerp(background, other.background, t)!, 
-      textField: Color.lerp(textField, other.textField, t)!, 
-      textField2: Color.lerp(textField2, other.textField2, t)!, 
-      inactive: Color.lerp(inactive, other.inactive, t)!,
-      dialogBackgroundColor: Color.lerp(dialogBackgroundColor, other.dialogBackgroundColor, t)!
-    );
+        primary: Color.lerp(primary, other.primary, t)!,
+        secondary: Color.lerp(secondary, other.secondary, t)!,
+        surface: Color.lerp(surface, other.surface, t)!,
+        background: Color.lerp(background, other.background, t)!,
+        textField: Color.lerp(textField, other.textField, t)!,
+        textField2: Color.lerp(textField2, other.textField2, t)!,
+        inactive: Color.lerp(inactive, other.inactive, t)!,
+        dialogBackgroundColor:
+            Color.lerp(dialogBackgroundColor, other.dialogBackgroundColor, t)!);
   }
 
   static AppColorScheme of(BuildContext context) =>
