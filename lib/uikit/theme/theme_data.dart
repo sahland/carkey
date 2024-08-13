@@ -7,39 +7,28 @@ abstract class AppThemeData {
   static const _darkColorScheme = AppColorScheme.dark();
 
   static final lightTheme = ThemeData(
-    extensions: const [_lightColorScheme],
-    brightness: Brightness.light,
-    colorScheme: ColorScheme.light(
+      extensions: const [_lightColorScheme],
       brightness: Brightness.light,
-      primary: _lightColorScheme.primary
-    ),
-    scaffoldBackgroundColor: _lightColorScheme.background,
-    cardColor: _lightColorScheme.surface,
-    primaryColor: _lightColorScheme.primary,
-    textTheme: TextTheme(
-      bodyMedium: TextStyle(
-        color: _lightColorScheme.textField
-      )
-    ),
-    dialogBackgroundColor: _lightColorScheme.dialogBackgroundColor
-  );
+      colorScheme: ColorScheme.light(
+          brightness: Brightness.light, primary: _lightColorScheme.primary),
+      scaffoldBackgroundColor: _lightColorScheme.background,
+      cardColor: _lightColorScheme.surface,
+      primaryColor: _lightColorScheme.primary,
+      textTheme:
+          TextTheme(bodyMedium: TextStyle(color: _lightColorScheme.textField)),
+      dialogBackgroundColor: _lightColorScheme.dialogBackgroundColor);
 
   static final darkTheme = ThemeData(
-    extensions: const [_darkColorScheme],
-    brightness: Brightness.dark,
-    colorScheme: ColorScheme.dark(
+      extensions: const [_darkColorScheme],
       brightness: Brightness.dark,
-      primary: _darkColorScheme.primary,
-      surface: _darkColorScheme.surface
-    ),
-    scaffoldBackgroundColor: _darkColorScheme.background,
-    cardColor: _darkColorScheme.surface,
-    primaryColor: _darkColorScheme.primary,
-    textTheme: TextTheme(
-      bodyMedium: TextStyle(
-        color: _darkColorScheme.textField
-      )
-    ),
-    dialogBackgroundColor: _darkColorScheme.dialogBackgroundColor
-  );
+      colorScheme: ColorScheme.dark(
+          brightness: Brightness.dark,
+          primary: _darkColorScheme.primary,
+          surface: _darkColorScheme.surface),
+      scaffoldBackgroundColor: _darkColorScheme.background,
+      cardColor: _darkColorScheme.surface,
+      primaryColor: _darkColorScheme.primary,
+      textTheme:
+          TextTheme(bodyMedium: TextStyle(color: _darkColorScheme.textField)),
+      dialogBackgroundColor: _darkColorScheme.dialogBackgroundColor);
 }
